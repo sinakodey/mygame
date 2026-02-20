@@ -11,13 +11,6 @@ jobs:
         with:
           java-version: 17
           distribution: temurin
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install dependencies
-        run: npm install
-      - name: Capacitor sync
-        run: node node_modules/@capacitor/cli/bin/capacitor sync android
       - name: Build APK
         run: |
           cd android
